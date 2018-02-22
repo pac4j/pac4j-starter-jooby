@@ -82,6 +82,10 @@ Open a browser and type:
 
     http://localhost:8080/profile
 
+## screenshot
+
+![Pac4j Starter](https://github.com/jooby-project/pac4j-starter/raw/master/public/images/pac4jstarter.png)
+
 ## help
 
 * Read the [pac4j documentation](http://www.pac4j.org/2.2.x/docs/index.html)
