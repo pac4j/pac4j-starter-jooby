@@ -1,23 +1,25 @@
-[![Build Status](https://travis-ci.org/jooby-project/pac4j-starter.svg?branch=master)](https://travis-ci.org/jooby-project/pac4j-starter)
-# pac4j starter
+package starter.pac4j;
 
-<a href="http://www.pac4j.org/2.2.x/docs/index.html">Pac4j</a> Starter project.
+import org.jooby.Jooby;
+import org.jooby.Results;
+import org.jooby.hbs.Hbs;
+import org.jooby.pac4j.Pac4j;
+import org.pac4j.core.context.Pac4jConstants;
+import org.pac4j.core.context.WebContext;
+import org.pac4j.core.credentials.UsernamePasswordCredentials;
+import org.pac4j.core.profile.CommonProfile;
+import org.pac4j.core.profile.UserProfile;
+import org.pac4j.core.profile.definition.CommonProfileDefinition;
+import org.pac4j.http.client.indirect.FormClient;
+import org.pac4j.http.credentials.authenticator.test.SimpleTestUsernamePasswordAuthenticator;
+import org.pac4j.oauth.client.FacebookClient;
+import org.pac4j.oauth.client.TwitterClient;
+import org.pac4j.oidc.client.OidcClient;
+import org.pac4j.oidc.config.OidcConfiguration;
 
-## quick preview
-
-This project contains a simple application that:
-
-* Shows you how to login with
-
-    * Facebook
-    * Twitter
-    * Google
-    * Custom login form
- 
-
-[App.java](https://github.com/jooby-project/pac4j-starter/blob/master/src/main/java/starter/pac4j/App.java):
-
-```java
+/**
+ * Pac4j starter project.
+ */
 public class App extends Jooby {
 
   {
@@ -72,20 +74,3 @@ public class App extends Jooby {
   }
 
 }
-```
-
-## run
-
-    mvn jooby:run
-
-Open a browser and type:
-
-    http://localhost:8080/profile
-
-## help
-
-* Read the [pac4j documentation](http://www.pac4j.org/2.2.x/docs/index.html)
-* Read the [pac4j module documentation](http://jooby.org/doc/pac4j2)
-* Read the [jooby documentation](http://jooby.org/doc)
-* Join the [channel](https://gitter.im/jooby-project/jooby)
-* Join the [group](https://groups.google.com/forum/#!forum/jooby-project)
